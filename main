@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+
+    srand(time(0));
+    int secretNumber = 1 + (rand() % 10);
+    int guessNumber;
+
+    while (guessNumber != secretNumber) {
+        cout << "guess a number between 1 and 10:";
+        cin >> guessNumber;
+        if (guessNumber == secretNumber) {
+            cout << "you got it! bye bye!";
+        }
+    }
+
+    return 0;
+}
+
